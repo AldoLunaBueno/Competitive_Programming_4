@@ -38,6 +38,9 @@ def _test_from_data(input_data, expected):
         capture_output=True
     )
     out = result.stdout.strip()
+    err = result.stderr
     
+    print(err)
+
     # Compare the output with the expected result
     assert out == expected
