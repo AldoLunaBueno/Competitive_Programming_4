@@ -1,0 +1,43 @@
+1 1 1 1
+0 0 0 0
+---
+Tie.
+===
+1 2 1 3
+3 3 2 1  
+6 6 4 4
+6 5 1 1
+4 2 2 4 
+1 1 1 1
+6 6 6 6 
+0 0 0 0
+---
+Player 1 wins.
+Player 2 wins.
+Player 1 wins.
+Player 2 wins.
+Tie.
+Tie.
+Tie.
+===
+1 2 2 1
+2 1 1 2
+1 2 1 2
+---
+Tie.
+Tie.
+Tie.
+===
+2 3 1 1
+5 5 6 5
+0 0 0 0
+---
+Player 2 wins.
+Player 1 wins.
+===
+2 5 3 4
+4 1 2 3
+0 0 0 0
+---
+Player 1 wins.
+Player 1 wins.
