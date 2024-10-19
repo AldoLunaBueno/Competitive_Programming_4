@@ -1,3 +1,5 @@
+# Lost Lineup - Kattis
+
 n = int(input())
 line = [int(x) for x in input().strip().split()]
 # You, Kattis, are a dirty cat. My 20 min bug was split(" ")
