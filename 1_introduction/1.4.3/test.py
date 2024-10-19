@@ -3,8 +3,8 @@ import subprocess
 import sys
 
 # PATHS ARE ALL YOU NEED TO CHANGE:
-PATH_TO_SCRIPT = "g_5_acm.py"
-PATH_TO_TEST_CASES = "test_g_5_acm.txt"
+PATH_TO_SCRIPT = "h_6_hangingout.py"
+PATH_TO_TEST_CASES = "test_h_6_hangingout.txt"
 
 def load_test_cases(file_name):
     # Read the file and separate the test cases by '==='
@@ -44,3 +44,4 @@ def _test_from_data(input_data, expected):
     
     # Compare the output with the expected result
     assert out == expected
+    # assert abs(float(out) - float(expected)) < 10**-3
