@@ -3,8 +3,8 @@ import subprocess
 import sys
 
 # PATHS ARE ALL YOU NEED TO CHANGE:
-PATH_TO_SCRIPT = "j_6_bitsequalizer.py"
-PATH_TO_TEST_CASES = "test_j_6_bitsequalizer.txt"
+PATH_TO_SCRIPT = "j_extra_cowcrane.py"
+PATH_TO_TEST_CASES = "test_j_extra_cowcrane.txt"
 
 def load_test_cases(file_name):
     # Read the file and separate the test cases by '==='
