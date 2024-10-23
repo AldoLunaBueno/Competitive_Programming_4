@@ -5,8 +5,8 @@ import sys
 # PATHS ARE ALL YOU NEED TO CHANGE:
 # PATH_TO_SCRIPT = "g_7_workout.py"
 # PATH_TO_TEST_CASES = "test_g_7_workout.txt"
-PATH_TO_SCRIPT = "g_extra_saxophone.py"
-PATH_TO_TEST_CASES = "test_g_extra_saxophone.txt"
+PATH_TO_SCRIPT = "f_extra_score.py"
+PATH_TO_TEST_CASES = "test_f_extra_score.txt"
 
 def load_test_cases(file_name):
     # Read the file and separate the test cases by '==='
@@ -19,6 +19,7 @@ def load_test_cases(file_name):
     for case in cases:
         # Split each case into input and output using '---'
         input_data, expected = case.strip().split('---')
+        #input_data, expected = case.strip().split('***') # for recipes problem
         test_cases.append((input_data.strip(), expected.strip()))
     
     return test_cases
