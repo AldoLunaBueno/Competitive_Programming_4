@@ -3,8 +3,8 @@ import subprocess
 import sys
 
 # PATHS ARE ALL YOU NEED TO CHANGE:
-PATH_TO_SCRIPT = "a_6_downtime.py"
-PATH_TO_TEST_CASES = "test_a_6_downtime.txt"
+PATH_TO_SCRIPT = "g_6_magicsequence.py"
+PATH_TO_TEST_CASES = "test_g_6_magicsequence.txt"
 
 def load_test_cases(file_name):
     # Read the file and separate the test cases by '==='
