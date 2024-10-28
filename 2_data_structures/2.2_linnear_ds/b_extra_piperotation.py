@@ -6,7 +6,25 @@
 # (C) Elbow-shaped pipe (pipes leaving through two adjacent edges)
 # (D) Four-way pipe (pipes leaving through all four edges)
 
-# Interesting problem. Solved with a flag and a flag vector.
+# Interesting problem. Solved with a flag and a flag vector of boolean values.
+
+# Reasoning:
+#
+# left_even (value): Is the number of C tubes seen so far from left to right in the row even?
+# top_even (list):   Is the number of C tubes seen so far from top to bottom in the column even?
+#
+# For each cell, is impossible if the following is not true:
+#     top_even | True | False
+# left_even    | 
+# ----------------------------
+#      True    |  A/C |   B/C
+# --------------------------
+#     False    |  B/C |   C/D
+#
+# Also is impossible if top_even or left_even are false at the end 
+# (at the end of each row for left_even and at the very end for top_even).
+#
+# Else, is possible.
 
 POSSIBLE = "Possible"
 IMPOSSIBLE = "Impossible"
@@ -15,8 +33,8 @@ ROWS, COLS = map(int, input().split())
 BOARD = [input() for _ in range(ROWS)]
 
 def solve():
-    left_even = True # Is the number of C tubes seen so far from left to right in the row even?
-    top_even = [True] * COLS # Is the number of C tubes seen so far from top to bottom in the column even?
+    left_even = True
+    top_even = [True] * COLS
     for i in range(ROWS):
         for j in range(COLS):        
             pipe = BOARD[i][j]
