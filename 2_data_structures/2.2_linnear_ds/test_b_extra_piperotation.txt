@@ -1,0 +1,42 @@
+2 2
+CC
+CC
+---
+Possible
+===
+2 2
+CC
+CB
+---
+Impossible
+===
+3 3
+CCC
+CCC
+CCC
+---
+Impossible
+===
+3 4
+CBCA
+BCDC
+CCCC
+---
+Possible
+===
+5 2
+CC
+CC
+AA
+CC
+CC
+---
+Possible
+===
+4 4
+CBBC
+BCCB
+BCCB
+CBBC
+---
+Possible
