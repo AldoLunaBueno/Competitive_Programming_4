@@ -3,8 +3,8 @@ import subprocess
 import sys
 
 # PATHS ARE ALL YOU NEED TO CHANGE:
-PATH_TO_SCRIPT = "g_6_magicsequence.py"
-PATH_TO_TEST_CASES = "test_g_6_magicsequence.txt"
+PATH_TO_SCRIPT = "b_7_pivot.py"
+PATH_TO_TEST_CASES = "test_b_7_pivot.txt"
 
 def load_test_cases(file_name):
     # Read the file and separate the test cases by '==='
