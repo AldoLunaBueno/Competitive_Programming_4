@@ -4,7 +4,7 @@ Favorites:
 
 - 2.2 Pipe Rotation
 - 2.2 Astro
-
+. 2.2 Queens
 Hard unsolved problems:
 
 - 1.6 Workout
