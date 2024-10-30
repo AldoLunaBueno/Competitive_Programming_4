@@ -6,6 +6,7 @@
 # other character than "_" at that line.
 # The surviving columns are blank columns.
 # A blank column is a column where all the characters are "_"
+# The number of dance moves is the number of blank columns plus one.
 
 
 from sys import stdin
