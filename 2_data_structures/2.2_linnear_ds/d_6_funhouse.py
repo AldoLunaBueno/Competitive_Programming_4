@@ -2,16 +2,24 @@
 
 # Reasoning
 #
-# Each house is interpreted rotating the string representation 
-# 90 degrees counterclockwise
+# Each house is interpreted 
+# rotating the string representation 90 degrees counterclockwise.
+# The solution is simulate the movement of a ray of light. 
+# For each iteration the position moves (straight or reflected by a mirror)
+# one unit to an adyacent position until it reaches a wall, 
+# where the exit should be.
+#
+# Details
+#
 # x and y defines position.
 # axis and sign defines direction.
 # - axis can be horizontal (True) of vertical (False)
 # - sign can be positive (True) or negative (False)
 # This definition of direction makes it 
-# easy to change it when a mirror appears 
+# easy to update it when a mirror appears 
 # by fliping the axis or the axis and the sign 
-# depending on the mirror type and previous direction.
+# depending on mirror type and direction of incidence.
+# The next position is determined by the current position and direction
 
 from typing import List, Tuple
 
@@ -20,7 +28,7 @@ ENTRANCE = "*"
 EXIT = "&"
 MIRROR_BCK = "\\"
 MIRROR_DIV = "/"
-SPACE = "."
+EMPTY = "."
 
 
 def find_entrance(house: List[str]) -> Tuple[int]:
@@ -59,7 +67,7 @@ while True:
     y, x = find_entrance(house)
     axis, sign = initial_direction(x, y, l, w) # rotate 90 ccw
     while house[x][y] != WALL:
-        if house[x][y] == SPACE:
+        if house[x][y] == EMPTY:
             pass
         elif house[x][y] == MIRROR_DIV:
             axis, sign = not axis, not sign
