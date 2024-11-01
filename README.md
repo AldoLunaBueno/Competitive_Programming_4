@@ -6,6 +6,7 @@ Favorites:
 - 2.2 Astro
 . 2.2 Queens
 - 2.2 Rock Band
+- 2.2 Tetris
 
 Hard unsolved problems:
 
