@@ -2,13 +2,13 @@
 
 # Reasoning
 #
-# For each number in its string form calculate its upside down version
-# and store both the number and the turned number,
+# For each number in its string form, calculate its upside down version
+# and store both the number and the turned number (converted to int),
 # each one attached with the same index,
 # except for these 2 cases:
 # (1) the number has digits that can't be turned
 # (2) the turned number is equal to the number
-# In these 2 cases just store the number attached with a unique index.
+# In these 2 cases store only the number attached with a unique index.
 #
 # Sort the list of tuples by first element for binary search.
 # Then make a copy for calculate the complement of the list
@@ -18,7 +18,7 @@
 # Say we found a list number equal to a complement number.
 # If its indexes are also equal, then this pair can't be used
 # because it comes from the same card, and we need to look
-# for some immediate adyacent number
+# for some immediate adyacent number (because it's sorted!)
 #
 # Time complexity: O(n*log(n))
 
