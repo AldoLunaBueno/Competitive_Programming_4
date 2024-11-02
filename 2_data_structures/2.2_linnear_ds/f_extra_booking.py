@@ -13,7 +13,8 @@
 # Finally, iterate over the flatten list accumulating the in/out values.
 # This accumulated value is exactly the number of overlapping intervals
 # at each moment, until the next point.
-
+#
+# Related problem: Parking
 
 from datetime import datetime, timedelta
 
