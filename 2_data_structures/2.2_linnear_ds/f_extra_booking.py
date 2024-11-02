@@ -6,7 +6,7 @@
 # of booking plus cleaning.
 # The overlapping interval counting problem (time, distance or anything)
 # can be solved by flatten the intervals to its start and end points.
-# Just attach a in/out flag: 1 to a start point and -1 to an end point, 
+# Just attach an in/out flag: 1 for a start point and -1 for an end point, 
 # and sort by the point measure.
 # Additionaly, stably sort previously by this in/out flag if the intervals
 # aren't given sorted by the start point to avoid overcounting.
