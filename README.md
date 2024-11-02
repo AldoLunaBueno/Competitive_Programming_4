@@ -8,6 +8,7 @@ Favorites:
 - 2.2 Rock Band
 - 2.2 Tetris
 - 2.2 Add 'Em Up!
+- 2.2 Booking
 
 Hard unsolved problems:
 
