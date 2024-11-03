@@ -1,0 +1,34 @@
+10
+E business_as_usual
+E bobby_dies
+S 1 bobby_died
+E stuff_happens
+E jr_does_bad_things
+S 2 !bobby_dies business_as_usual
+E it_goes_on_and_on
+D 4
+S 1 !bobby_dies
+S 2 !bobby_dies it_goes_on_and_on
+---
+Plot Error
+3 Just A Dream
+Yes
+Plot Error
+===
+11
+S 1 !something
+E one
+E two
+E three
+E four
+E five
+S 3 three !four one
+D 1
+S 3 three !four one
+D 1
+S 3 three !four one
+---
+Yes
+2 Just A Dream
+1 Just A Dream
+Yes
