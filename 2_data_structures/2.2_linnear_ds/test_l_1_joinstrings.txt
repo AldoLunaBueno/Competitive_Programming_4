@@ -1,0 +1,55 @@
+4
+cute
+cat
+kattis
+is
+3 2
+4 1
+3 4
+---
+kattiscatiscute
+===
+3
+howis
+this
+practicalexam
+1 2
+1 3
+---
+howisthispracticalexam
+===
+4
+a
+b
+c
+d
+1 2
+1 3
+1 4
+---
+abcd
+===
+2
+a
+b
+2 1
+---
+ba
+===
+5
+a
+b
+c
+d
+e
+1 3
+2 1
+5 2
+5 4
+---
+ebacd
+===
+1
+a
+---
+a

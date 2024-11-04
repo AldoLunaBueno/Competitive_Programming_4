@@ -9,6 +9,7 @@ Favorites:
 - 2.2 Tetris
 - 2.2 Add 'Em Up!
 - 2.2 Booking
+- 2.2 Join Strings
 
 Hard unsolved problems:
 
