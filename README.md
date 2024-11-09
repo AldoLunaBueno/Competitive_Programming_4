@@ -10,6 +10,8 @@ Favorites:
 - 2.2 Add 'Em Up!
 - 2.2 Booking
 - 2.2 Join Strings
+- 2.3 Juggling Patterns
+- 2.3 Foppy
 
 Hard unsolved problems:
 
