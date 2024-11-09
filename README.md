@@ -12,6 +12,7 @@ Favorites:
 - 2.2 Join Strings
 - 2.3 Juggling Patterns
 - 2.3 Foppy
+- 2.3 Deduplicating Files
 
 Hard unsolved problems:
 
