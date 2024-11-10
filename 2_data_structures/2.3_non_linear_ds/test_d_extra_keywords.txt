@@ -16,7 +16,7 @@ Linux
 5
 ===
 2
-My-SQL
+MySQL
 MySql
 ---
 1
