@@ -4,7 +4,17 @@
 #
 # Reasoning
 #
-# 
+# We want the largest continuous sequence of unique elements.
+# For each element, we require a way to lookup in the current sequence of unique elements 
+# if we already have the current element. For this we need a set or a hash table.
+# Then we delete this element and the previous ones from the current sequence of elements 
+# to maintain its continuity and the uniqueness of its elements.
+# Delete elements is easy in a deque (it's suitable for removing from the begining), 
+# but for delete elements in a set (or hash table) we need to know its keys. 
+# So we can store the keys in a deque to then delete the elements from the set or hash table.
+# The deque and the set (or hash table) must to be synchronized.
+# A hash table let to increase a little the speed compared to a set
+# if we calculate how many elements we need to delete (in my code is called stop).
 
 import sys
 from collections import deque
