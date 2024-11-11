@@ -1,0 +1,64 @@
+def foo 3
+calc foo + bar =
+def bar 7
+def programming 10
+calc foo + bar =
+def is 4
+def fun 8
+calc programming - is + fun =
+def fun 1
+calc programming - is + fun =
+clear
+---
+foo + bar = unknown
+foo + bar = programming
+programming - is + fun = unknown
+programming - is + fun = bar
+===
+def foo 3
+calc foo + bar =
+def bar 7
+def programming 10
+calc foo + bar =
+def is 4
+def fun 8
+calc programming - is + fun =
+def fun 1
+calc programming - is + fun =
+clear
+def foo 3
+calc foo + bar =
+def bar 7
+def programming 10
+calc foo + bar =
+def is 4
+def fun 8
+calc programming - is + fun =
+def fun 1
+calc programming - is + fun =
+---
+foo + bar = unknown
+foo + bar = programming
+programming - is + fun = unknown
+programming - is + fun = bar
+foo + bar = unknown
+foo + bar = programming
+programming - is + fun = unknown
+programming - is + fun = bar
+===
+def x 4
+def x 5
+def a 2
+def b 3
+calc a + a =
+calc a + b =
+calc x =
+clear
+---
+a + a = unknown
+a + b = x
+x = x
+===
+calc x =
+---
+x = unknown
