@@ -1,7 +1,7 @@
 # Union-Find
-import sys
-
 # RUNTIME: 0.85 s
+
+import sys
 
 def union(network, size, a, b):
     a_group = find(network, a)
