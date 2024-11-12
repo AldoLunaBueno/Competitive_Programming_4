@@ -3,15 +3,8 @@ import subprocess
 import sys
 
 # PATHS ARE ALL YOU NEED TO CHANGE:
-# PATH_TO_SCRIPT = "b_extra_traffic.py"
-# PATH_TO_TEST_CASES = "test_b_extra_traffic.txt"
-# PATH_TO_SCRIPT = "l_extra_trendingtopic.py"
-# PATH_TO_TEST_CASES = "test_l_extra_trendingtopic.txt"
-# PATH_TO_SCRIPT = "k_5_bungeebuilder.py"
-# PATH_TO_TEST_CASES = "test_k_5_bungeebuilder.txt"
-
-PATH_TO_SCRIPT = "k_7_delimitersoup.py"
-PATH_TO_TEST_CASES = "test_k_7_delimitersoup.txt"
+PATH_TO_SCRIPT = "f_7_basicinterpreter.py"
+PATH_TO_TEST_CASES = "test_f_7_basicinterpreter.txt"
 
 def load_test_cases(file_name):
     # Read the file and separate the test cases by '==='
