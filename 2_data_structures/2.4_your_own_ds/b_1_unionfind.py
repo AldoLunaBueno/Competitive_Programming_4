@@ -3,15 +3,15 @@
 
 import sys
 
-def union(network, size, a, b):
-    a_group = find(network, a)
-    b_group = find(network, b)
+def union(parent, size, a, b):
+    a_group = find(parent, a)
+    b_group = find(parent, b)
     if a_group == b_group:
         return
     # union by size
     if size[a_group] < size[b_group]:
         a_group, b_group = b_group, a_group
-    network[b_group] = a_group
+    parent[b_group] = a_group
     size[a_group] += size[b_group]
 
 # With this recursive find() it's slower! RUNTIME: 0.96 s
