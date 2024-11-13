@@ -21,7 +21,8 @@
 # but they point to RA and RB (the real roots):
 #       parent = [0, A, B, RA, RB]
 # If we do A union B, we really do RA union RB.
-#
+# But if we move A to B, make A a child of RB.
+
 # There is not much more because everything else works as before. And size and sum are easy to implement.
 # Be careful with my 30 minutes bug: the input file may contain several test cases.
 #
