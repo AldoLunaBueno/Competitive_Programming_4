@@ -1,5 +1,7 @@
 # Competitive_Programming_4
 
+To test any solution, you need to set the current directory there, edit the 
+
 Favorites:
 
 - 2.2 Pipe Rotation
@@ -13,6 +15,7 @@ Favorites:
 - 2.3 Juggling Patterns
 - 2.3 Foppy
 - 2.3 Deduplicating Files
+- 2.4 Almost Union-Find
 
 Hard unsolved problems:
 
