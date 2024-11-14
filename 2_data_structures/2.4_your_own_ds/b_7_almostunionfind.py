@@ -1,5 +1,5 @@
 # Almost Union-Find
-# RUNTIME: 	0.41 s
+# RUNTIME: 0.39 s (Faster Category on Python!)
 #
 # Reasoning:
 #
@@ -28,45 +28,49 @@
 #
 # The idea were found at https://codeforces.com/blog/entry/130521
 
-import sys
+# BASED ON CLOSURE
 
-class UnionFind:
-    def __init__(self, n):
-        self.parent = list(range(2*n+1)) # this does the MOVE trick!
-        self.parent[1:n+1] = self.parent[n+1:2*n+1] # and this: i = n+i
-        self.size = [1]*(2*n+1)
-        self.arr_sum = list(range(-n, n+1))
+import sys
+from types import SimpleNamespace
+
+def UnionFind(n):
+    parent = list(range(2*n+1)) # this does the MOVE trick!
+    parent[1:n+1] = parent[n+1:2*n+1] # and this: i = n+i
+    size = [1]*(2*n+1)
+    arr_sum = list(range(-n, n+1))
     
-    def find(self, a):
+    def find(a):
         tmp = a
-        while a != self.parent[a]:
-            a = self.parent[a]
-        self.parent[tmp] = a # path compression
+        while a != parent[a]:
+            a = parent[a]
+        parent[tmp] = a # path compression
         return a
     
-    def union(self, a, b):
-        a_root = self.find(a)
-        b_root = self.find(b)
-        if self.parent[a_root] == self.parent[b_root]:
+    def union(a, b):
+        a_root, b_root = find(a), find(b)
+        if parent[a_root] == parent[b_root]:
             return
-        if self.size[a_root] < self.size[b_root]:
+        if size[a_root] < size[b_root]:
             a_root, b_root = b_root, a_root # union by size
-        # change size and sum before changing the structure
-        self.size[a_root] += self.size[b_root]
-        self.arr_sum[a_root] += self.arr_sum[b_root]
-        self.parent[b_root] = a_root # changes the structure
+        size[a_root] += size[b_root]
+        arr_sum[a_root] += arr_sum[b_root]
+        parent[b_root] = a_root # changes the structure
     
-    def move(self, a, b):
-        a_root = self.find(a)
-        b_root = self.find(b)
-        if self.parent[a_root] == self.parent[b_root]:
+    def move(a, b):
+        a_root, b_root = find(a), find(b)
+        if parent[a_root] == parent[b_root]:
             return
-        # change size and sum before changing the structure
-        self.size[a_root] -= 1
-        self.size[b_root] += 1
-        self.arr_sum[a_root] -= a
-        self.arr_sum[b_root] += a
-        self.parent[a] = b_root # changes the structure
+        size[a_root] -= 1
+        size[b_root] += 1
+        arr_sum[a_root] -= a
+        arr_sum[b_root] += a
+        parent[a] = b_root # changes the structure
+
+    def get_detail(a):
+        a_root = find(a)
+        return size[a_root], arr_sum[a_root]
+
+    return SimpleNamespace(union=union, find=find, move=move, get_detail=get_detail)
 
 input = sys.stdin.readlines()
 i = 0
@@ -80,7 +84,67 @@ while i < len(input):
                 uf.union(*args)
             case 2: # move
                 uf.move(*args)
-            case 3: # size
-                root = uf.find(*args)
-                print(uf.size[root], uf.arr_sum[root])
+            case 3: # size and sum
+                print(*uf.get_detail(*args))
     i += q+1
+
+
+# BASED ON CLASS
+# RUNTIME: 	0.41 s
+
+# import sys
+
+# class UnionFind:
+#     def __init__(self, n):
+#         self.parent = list(range(2*n+1)) # this does the MOVE trick!
+#         self.parent[1:n+1] = self.parent[n+1:2*n+1] # and this: i = n+i
+#         self.size = [1]*(2*n+1)
+#         self.arr_sum = list(range(-n, n+1))
+    
+#     def find(self, a):
+#         tmp = a
+#         while a != self.parent[a]:
+#             a = self.parent[a]
+#         self.parent[tmp] = a # path compression
+#         return a
+    
+#     def union(self, a, b):
+#         a_root = self.find(a)
+#         b_root = self.find(b)
+#         if self.parent[a_root] == self.parent[b_root]:
+#             return
+#         if self.size[a_root] < self.size[b_root]:
+#             a_root, b_root = b_root, a_root # union by size
+#         # change size and sum before changing the structure
+#         self.size[a_root] += self.size[b_root]
+#         self.arr_sum[a_root] += self.arr_sum[b_root]
+#         self.parent[b_root] = a_root # changes the structure
+    
+#     def move(self, a, b):
+#         a_root = self.find(a)
+#         b_root = self.find(b)
+#         if self.parent[a_root] == self.parent[b_root]:
+#             return
+#         # change size and sum before changing the structure
+#         self.size[a_root] -= 1
+#         self.size[b_root] += 1
+#         self.arr_sum[a_root] -= a
+#         self.arr_sum[b_root] += a
+#         self.parent[a] = b_root # changes the structure
+
+# input = sys.stdin.readlines()
+# i = 0
+# while i < len(input):
+#     n, q = map(int, input[i].split())
+#     uf = UnionFind(n)
+#     for j in range(i+1, i+1+q):
+#         op, *args = map(int, input[j].split())
+#         match op:
+#             case 1: # union
+#                 uf.union(*args)
+#             case 2: # move
+#                 uf.move(*args)
+#             case 3: # size
+#                 root = uf.find(*args)
+#                 print(uf.size[root], uf.arr_sum[root])
+#     i += q+1
