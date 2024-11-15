@@ -19,16 +19,16 @@ process.stdin.on('end', _ => {
 });
 
 function readline() {
-    return inputString[currentLine++];
+    return inputString[currentLine++]; // returns undefined when array overflow happens
 }
 
 // Solution
 
 function main() {
     let line = readline()
-    while (line !== "") {
-        let numbers = line.split(" ").map(n => parseInt(n))
-        let ans = Math.abs(numbers[0] - numbers[1])
+    while (line !== undefined && line !== "") {
+        let [num_1, num_2] = line.split(" ").map(n => parseInt(n))
+        let ans = Math.abs(num_1 - num_2)
         console.log(ans)
         line = readline()
     }
