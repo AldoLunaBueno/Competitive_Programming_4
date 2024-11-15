@@ -4,23 +4,24 @@
 # We have a number of distinct and individual ingredients.
 # A cauldron is a set of these ingredients.
 # The union-find structure is revealed when we think of cauldrons like disjoint sets.
-# An ingredient can't be in two cauldrons at the same time,
-# and once a cauldron is formed it can't be separated.
+# For simplicity, we consider that each ingredient is from the begining
+# in a cauldron of one element (we don't count these cauldrons).
+# Because of this, an ingredient is exactly in one cauldron at any time,
+# and once a cauldron is filled its ingredients can't be separated.
 # A cauldron can only transfer its contents to another cauldron,
 # so a cauldron receiving ingredients from several cauldrons 
 # is our multi-union operation.
-# For simplicity, we consider that each ingredient is from the begining
-# in a cauldron of one element (we don't count these cauldrons).
 #
-# The restriction of this muli-union operation is the concept of recipe.
+# The restriction of this multi-union operation is the concept of recipe.
 # A cauldron has exactly the ingredients of the recipe, no more, no less.
-# For our multi-union operation, this implies that, if a ingredient of a cauldron
-# is found in the recipe, all other ingredients of the cauldron must be found
-# to concoct the cauldron.
-# So our restriction in the end is this: (why?)
+# For our multi-union operation, this implies that, if an ingredient inside a cauldron
+# is found in a recipe, all other ingredients of the cauldron must be found
+# to fill the cauldron (because a cauldron can be separated once prepared).
+# So our restriction in the end is this:
 #       sum(size of found cauldrons) == len(recipe)
 #
-# The final result is the number of cauldrons concocted
+# The final result is the number of cauldrons prepared 
+# (the same as the number of potions concocted)
 
 from collections import defaultdict
 from typing import Tuple
