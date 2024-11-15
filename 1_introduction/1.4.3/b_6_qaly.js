@@ -19,20 +19,18 @@ process.stdin.on('end', _ => {
 });
 
 function readline() {
-    return inputString[currentLine++]; // returns undefined when array overflow happens
+    // returns empty string ("") if no input is given.
+    // returns undefined when array overflow happens.
+    return inputString[currentLine++];
 }
 
-// Solution
-
 function main() {
-    let line = readline()
-    if (line === "") { // just if there isn't input
-        return
+    let n = parseInt(readline())
+    let acc_qaly = 0
+    for (let i = 0; i < n; i++) {
+        let [a, b] = readline().split(" ").map(x => parseFloat(x))
+        acc_qaly += a*b
     }
-    while (line !== undefined) {
-        let [num_1, num_2] = line.split(" ").map(n => parseInt(n))
-        let ans = Math.abs(num_1 - num_2)
-        console.log(ans)
-        line = readline()
-    }
+    let ans = acc_qaly.toFixed(3)
+    console.log(ans)
 }

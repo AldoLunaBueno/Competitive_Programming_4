@@ -24,6 +24,8 @@ Hard unsolved problems:
 
 Some useful snippets
 
+Python: modular arithmetic
+
 ```python
 def solve_linear_congruence(a, b, m):
     """
@@ -37,4 +39,36 @@ def solve_linear_congruence(a, b, m):
         a, b, m = a//g, b//g, m//g
         a_inv = pow(a, -1, m)
         return b * a_inv % m
+```
+
+Node JS: read stadard input
+
+``` js
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.trim().split('\n').map(string => {
+        return string.trim();
+    });
+    
+    main();    
+});
+
+function readline() {
+    return inputString[currentLine++];
+}
+
+function main() {
+    // PUT YOUR CODE HERE
+}
 ```
