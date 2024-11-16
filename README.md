@@ -44,6 +44,12 @@ def solve_linear_congruence(a, b, m):
 Node JS: read stadard input
 
 ``` js
+function main() {
+    // PUT YOUR CODE HERE
+}
+
+// Readline
+
 'use strict';
 
 process.stdin.resume();
@@ -65,10 +71,12 @@ process.stdin.on('end', _ => {
 });
 
 function readline() {
+    // returns empty string ("") if no input is given.
+    // returns undefined when array overflow happens.
     return inputString[currentLine++];
 }
-
-function main() {
-    // PUT YOUR CODE HERE
-}
 ```
+
+In Windows we can't pass an EOF signal to the stdin (standard input)
+through keyboard like a user. This is an issue with Javascript,
+because it can be done in Python.
